@@ -1,0 +1,82 @@
+.footer{
+    padding-top: 50px;
+    background: rgb(22, 19, 19);
+    color: #fff;
+    input{
+        background: #111;
+    }
+    button{
+        margin-top: 8px;
+        background: #333333;
+        position:relative;
+        text-align: center;	
+    }
+    button:hover{
+        background: whitesmoke;
+        color: #333333;
+    }
+    h5{
+        color: rgb(229, 231, 75)
+    }
+    p{
+        color: rgb(165, 153, 153);
+    }
+    .row{
+        color: rgb(165, 153, 153);
+        padding: 20px;
+    }
+    .ft{
+        padding-left: 60px;
+    }
+    .company-social {
+        margin-left: 0;
+        padding-left: 0;
+        margin-top: 10px;
+        li{
+            display: inline-block;
+            margin:0 !important;
+            padding:0;
+        }
+        a{
+            margin:0;
+            padding:0;
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: #3bbec0;
+            color: #fff;
+            i{
+                text-align: center;
+                margin:0;
+                padding:0;
+            }
+        }
+        .social-facebook a{
+            background: #3873ae;
+            &:hover{
+                background: #4893ce;
+            }
+        }
+        .social-twitter a{
+            background: #62c6f8;
+            &:hover{
+                background: #82e6ff;
+            }
+        }
+        .social-dribble a{
+            background: #d74980;
+            &:hover{
+                background: #f769a0;
+            }
+        }
+        .social-google a{
+            background: #000;
+            &:hover{
+                background: #333;
+            }
+        }
+
+    }
+}

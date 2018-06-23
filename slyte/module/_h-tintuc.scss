@@ -1,0 +1,20 @@
+.htintuc{
+    .card-tt{
+        background-color: #fff;
+        box-shadow: 0 7px 21.2px 1.8px rgba(173, 174, 174, .52);
+        padding: 20px;
+        margin: 20px 0;
+        img{
+            @include position-center-middle();
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .htintuc{
+        .card-tt{
+            img{
+                position: relative;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.hsp{
+    background: $red;
+    .card{
+        background: none;
+        padding: 10px;
+        border: 2.5px dotted $green;
+        &:hover{
+            border: 2.5px dotted $blue;
+        }
+    }
+}

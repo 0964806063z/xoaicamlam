@@ -1,0 +1,36 @@
+.h-top{
+    margin-top: -150px;
+    .card{
+        background: $green;
+        a{
+            padding:0;
+            margin: 0;
+        }
+    }
+    img{
+        border-radius: 50%;
+        padding: 10px 40px;
+        transition:all 0.5s ease-out;
+        &:hover {
+            transform:rotateY(360deg);
+        }
+    }
+    .card-top{
+        text-align: center;
+    }
+}
+.about{
+    img{
+        @include position-center-middle();
+    }
+}
+@media (max-width: 991.98px) {
+    .h-top{
+        margin-top: 20px;
+    }
+    .about{
+        img{
+            position: relative;
+        }
+    }
+}

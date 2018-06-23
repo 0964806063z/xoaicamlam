@@ -12,7 +12,7 @@
                 <a class="nav-link" href="about.php">Giới thiệu</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <a class="nav-link dropdown-toggle" href="sanpham.php" id="navbardrop" data-toggle="dropdown">
                       Sản phẩm
                 </a>
                 <div class="dropdown-menu">
@@ -32,11 +32,12 @@
                     </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Liên hệ</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#contact">Liên hệ</a>
             </li>    
         </ul>
     </div>  
 </nav>
+
 <div id="slide-banner" class="carousel slide slide-banner" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -51,3 +52,5 @@
   </div>
   <h1>XOÀI CAM LÂM</h1>
 </div>
+
+<!-- contact -->

@@ -1,0 +1,45 @@
+.spct{
+    margin-top: 15px;
+    h4{
+        padding: 20px;
+        text-align: center;
+        color: $green;
+        
+    }
+    .hsp{
+        background: none;
+        .card{
+            border: 1px solid $blue;
+            &:hover{
+                border: 1px solid $green;
+            }
+        }
+        .ct-sp{
+            padding: 20px;
+            border-bottom: 1px solid $gray-700;
+            h5{
+                color: $green;
+                font-weight: bold;
+            }
+            h2{
+                color: $red;
+                font-weight: bold; 
+            }
+        }
+
+    }
+    a{
+        &:hover{
+            background: $gray-400;
+        }
+    }
+    .card-sphot{
+        border-bottom: 1.5px dotted $gray-700;
+        padding: 15px;
+        img{
+            @include position-center-middle();
+        }
+    }
+  
+    
+}

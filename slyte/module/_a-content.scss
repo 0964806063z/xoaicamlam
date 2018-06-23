@@ -1,4 +1,12 @@
 .act{
-    padding: 40px 0;
-
+    padding: 40px 20px;
+    h5{
+        color: $green;
+    }
+   .col-lg-9{
+        h5{
+            border-bottom: 2px dotted $green;
+            padding-bottom: 20px
+        }
+   }
 }

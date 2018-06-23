@@ -778,5 +778,55 @@ body {
 }
 
 .act {
-  padding: 40px 0;
+  padding: 40px 20px;
+}
+.act h5 {
+  color: #28a745;
+}
+.act .col-lg-9 h5 {
+  border-bottom: 2px dotted #28a745;
+  padding-bottom: 20px;
+}
+
+.spct {
+  margin-top: 15px;
+}
+.spct h4 {
+  padding: 20px;
+  text-align: center;
+  color: #28a745;
+}
+.spct .hsp {
+  background: none;
+}
+.spct .hsp .card {
+  border: 1px solid #007bff;
+}
+.spct .hsp .card:hover {
+  border: 1px solid #28a745;
+}
+.spct .hsp .ct-sp {
+  padding: 20px;
+  border-bottom: 1px solid #495057;
+}
+.spct .hsp .ct-sp h5 {
+  color: #28a745;
+  font-weight: bold;
+}
+.spct .hsp .ct-sp h2 {
+  color: #dc3545;
+  font-weight: bold;
+}
+.spct a:hover {
+  background: #ced4da;
+}
+.spct .card-sphot {
+  border-bottom: 1.5px dotted #495057;
+  padding: 15px;
+}
+.spct .card-sphot img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

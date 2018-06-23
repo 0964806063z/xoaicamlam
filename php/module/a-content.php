@@ -16,5 +16,13 @@
                     <a href="#"><p>Chính sách bồi thường</p></a>
                 </div>    
         </div>
+        <div class="col-lg-9">
+            <h5>Gioi thieu</h5>
+            <p>
+                noi dung
+            </p>
+            <div class="fb-like" data-href="http://localhost/XoaiCL/php/about.php" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
     </div>
 </div>
+

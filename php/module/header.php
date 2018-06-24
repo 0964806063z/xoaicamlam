@@ -16,7 +16,7 @@
                       Sản phẩm
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Xoài sống</a>
+                    <a class="dropdown-item" href="sanpham.php">Xoài sống</a>
                     <a class="dropdown-item" href="#">Bánh chín</a>
                     <a class="dropdown-item" href="#">Bánh xoài</a>
                 </div>
@@ -26,7 +26,7 @@
                           Tin tức
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Xoài sống</a>
+                        <a class="dropdown-item" href="tintuc.php">Xoài sống</a>
                         <a class="dropdown-item" href="#">Bánh chín</a>
                         <a class="dropdown-item" href="#">Bánh xoài</a>
                     </div>

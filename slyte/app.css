@@ -830,3 +830,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.tintuc h4 {
+  color: #28a745;
+  text-align: center;
+}
+
+.card-tthot {
+  padding: 20px 0;
+  border-bottom: 2px dotted #dee2e6;
+}

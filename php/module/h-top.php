@@ -1,54 +1,35 @@
 
 <div class="container " id="h-top">
     <div class="row h-top">
-        <div class="col-lg-3 col-sm-6">
-            <div class="card" >
-                    <a href="#" style="text-align: center;">                        
-                            <img  src="../img/br1.jpg" alt="Card image cap">
-                            <p><b><h5>  class="img-thumbna</h5></b></p>
-                        </a>   
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card" >
-                    <a href="#" style="text-align: center;">                        
-                            <img  src="../img/br1.jpg" alt="Card image cap">
-                            <p><b><h5>  class="img-thumbna</h5></b></p>
-                        </a>   
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card" >
-                <a href="#" style="text-align: center;">                        
-                    <img  src="../img/br1.jpg" alt="Card image cap">
-                    <p><b><h5>  class="img-thumbna</h5></b></p>
-                    </a>   
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="card" >  
-                <a href="#" style="text-align: center;">                        
-                    <img  src="../img/br1.jpg" alt="Card image cap">
-                    <p><b><h5>  class="img-thumbna</h5></b></p>
-                </a>            
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
-        </div>
+                    <?php
+                        require_once("lib/connection.php");
+                        $sql = "select * from nhomsp";
+                        $query = mysqli_query($conn,$sql);
+						// Khởi tạo biến đếm $i = 0
+						$i = 0;
+						// Lặp dữ liệu lấy data từ cơ sở dữ liệu
+						while ( $data = mysqli_fetch_array($query) ) {
+                    ?>
+                    
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="card" >
+                                    <a href="../chitietsp.php?id=<?php echo $data["manhom"]?>" style="text-align: center;">                        
+                                            <img  src="../img/br1.jpg" alt="Card image cap">
+                                            <p><h3> <?php echo $data["tennhom"]  ?></h3></p>
+                                        </a>   
+                                <div class="card-body">
+                                    <p class="card-text"><?php echo $data["mota"] ?></p>
+                                </div>
+                            </div>
+                        </div>  
+					<?php
+							$i++;
+						}
+					?>        
     </div>
     <div class="about row">
         <div class="col-lg-12">
-        <h4>ve chung toi</h4>
+        <h2>Về chúng tôi</h2>
         </div>
         <div class="col-lg-3">
             <a href="#"><img src="../img/team/4.jpg" alt="" class="img-thumbnail"></a>

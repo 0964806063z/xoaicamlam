@@ -6,10 +6,9 @@
         <?php include "module/header.php" ?>
     </div>
     <div id="content">
-        <?php include "module/h-top.php" ?>
+      
         <?php include "module/h-sanpham.php" ?>
         <?php include "module/h-tintuc.php" ?>
-        <?php include "module/h-album.php" ?>
         
     </div>
     <div id="footer">

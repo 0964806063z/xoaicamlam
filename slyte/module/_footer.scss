@@ -1,7 +1,14 @@
 .footer{
     padding-top: 50px;
     background: rgb(22, 19, 19);
-    color: #fff;
+    color: $gray-500;
+    a{
+        display: block;
+        text-decoration: none;
+        color: $gray-500;
+        padding-bottom: 20px;
+        
+    }
     input{
         background: #111;
     }
@@ -17,13 +24,6 @@
     }
     h5{
         color: rgb(229, 231, 75)
-    }
-    p{
-        color: rgb(165, 153, 153);
-    }
-    .row{
-        color: rgb(165, 153, 153);
-        padding: 20px;
     }
     .ft{
         padding-left: 60px;

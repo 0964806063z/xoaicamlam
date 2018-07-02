@@ -1,6 +1,10 @@
-
 // setting
 @import "base/setting";
+
+// Option B: Include parts of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* Import bootstrap scss - only used */
 
 /* base */
 @import "base/mixins";
@@ -20,5 +24,6 @@
 @import "module/a-content";
 @import "module/sp-content";
 @import "module/tintuc";
+@import "module/admin";
 
 

@@ -1,6 +1,6 @@
 <div class="htintuc">
     <div class="container">
-        <h4>TIN TUC</h4>
+        <h2>TIN TỨC</h2>
         <div class="row">
             <div class="col-lg-6">
                 <div class="container">

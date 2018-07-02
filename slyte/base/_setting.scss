@@ -1,6 +1,6 @@
 /* font-family body */
 
-$font-family-base: "Ubuntu", sans-serif;
+$font-family-base: "Montserrat", sans-serif;
 
 /* font-family other */
 $ub: "Ubuntu", sans-serif;
@@ -80,8 +80,8 @@ $theme-colors: (
 
 
 /* body */
-$body-bg:       $black !default;
-$body-color:    $white !default;
+$body-bg:       $gray-200 !default;
+$body-color:    $gray-900 !default;
 
 /* color heading */
 $color-h: $body-color;
@@ -90,7 +90,7 @@ $color-h: $body-color;
 
 /* link */
 
-$link-color:            $blue !default;
+$link-color:            $red !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;

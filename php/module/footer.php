@@ -30,29 +30,26 @@
                 <h5>ĐĂNG KÝ NHẬN TIN</h5>
                 <p>Đăng ký Email để nhận thông tin mới nhất từ chúng tôi</p>
                 <form class="form-inline">
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Password</label>
-                        <input type="email" class="form-control" id="inputPassword2" placeholder="Email" required>
-                        <button type="submit" class="btn btn-primary mb-2">Đăng ký</button>
-                    </div>                  
+                        <input type="email" class="form-control" id="inputPassword2" placeholder="Email" required><br>
+                        <button type="submit" class="btn btn-primary mb-2">Đăng ký</button>                 
                 </form>
             </div>
             <div class="col-lg-3 ft" >
                 <h5>Giới thiệu</h5>
                 <div>
-                    <a href="#"><p>Về chúng tôi</p></a>
-                    <a href="#"><p>Tầm nhìn-Sứ mệnh</p></a>
-                    <a href="#"><p>Hệ thống phân phối</p></a>
-                    <a href="#"><p>Đối tác</p></a>
+                    <a href="#">Về chúng tôi</a>
+                    <a href="#">Tầm nhìn-Sứ mệnh</a>
+                    <a href="#">Hệ thống phân phối</a>
+                    <a href="#">Đối tác</a>
                 </div>
             </div>
             <div class="col-lg-3 ft">
                 <h5>Chính sách</h5>
                 <div>
-                    <a href="#"><p>Chính sách riêng tư</p></a>
-                    <a href="#"><p>Điều khoản & Điều kiện</p></a>
-                    <a href="#"><p>Thỏa thuận người dùng</p></a>
-                    <a href="#"><p>Chính sách bồi thường</p></a>
+                    <a href="#">Chính sách riêng tư</a>
+                    <a href="#">Điều khoản & Điều kiện</a>
+                    <a href="#">Thỏa thuận người dùng</a>
+                    <a href="#">Chính sách bồi thường</a>
                 </div>
             </div> 
         </div>

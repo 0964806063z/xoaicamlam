@@ -1,0 +1,22 @@
+.admin{
+    ul {
+        font-weight: 700;
+        li{
+        margin-left: 15px;
+        border-bottom: 1px solid $gray-500;   
+        }
+    }
+    input,select{
+        background: $white;
+        border: 1px solid $gray-500;
+    }
+    form{
+        padding: 20px;
+        border: 1px solid $gray-500;
+        .btn{
+            margin: 20px;
+            
+        }
+    }
+
+}

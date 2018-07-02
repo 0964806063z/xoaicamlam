@@ -13,11 +13,6 @@ option {
   outline: 0 !important;
 }
 
-html {
-  margin: 0 auto;
-  overflow-x: hidden;
-  background-color: #000;
-}
 
 body {
   overflow-x: hidden;
@@ -83,3 +78,10 @@ strong {
   font-weight: 700;
 }
 
+h2{
+  padding-top: 40px;
+  font-weight: 700;
+}
+h1{
+  color: $white;
+}

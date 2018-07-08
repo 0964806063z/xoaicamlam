@@ -2,42 +2,35 @@
 session_start();
 ?>
 <?php 
-//Gọi file connection.php ở bài trước
-require_once("connection.php");
-  // Kiểm tra nếu người dùng đã ân nút đăng nhập thì mới xử lý
+require_once("../lib/connection.php");
   $username=$password=NULL;
   $loi["login"]=$loi["nhap"]=NULL;
 if (isset($_POST["ok"])) {
-	// lấy thông tin người dùng
 	$username = $_POST["username"];
 	$password = $_POST["password"];
-	//làm sạch thông tin, xóa bỏ các tag html, ký tự đặc biệt 
-	//mà người dùng cố tình thêm vào để tấn công theo phương thức sql injection
 	$username = strip_tags($username);
 	$username = addslashes($username);
 	$password = strip_tags($password);
 	$password = addslashes($password);
 	if ($username == "" || $password =="") {
 		$loi["nhap"]= "* Tên tài khoản và mật khẩu bạn không được để trống!";
-	}else{
+  }
+  else{
 		$sql = "select * from user where username = '$username' and pass = '$password' ";
 		$query = mysqli_query($conn,$sql);
 		$num_rows = mysqli_num_rows($query);
 		if ($num_rows==0) {
 			$loi["login"]= "* Tên đăng nhập hoặc mật khẩu không đúng !";
-		}else{
-			// Lấy ra thông tin người dùng và lưu vào session
+    }
+    else{
 			while ( $data = mysqli_fetch_array($query) ) {
-	    	$_SESSION["iduser"] = $data["iduser"];
+	    	$_SESSION["iduser"] = $data["user_id"];
 				$_SESSION['username'] = $data["username"]=$username;
 				$_SESSION["name"] = $data["name"];
 				$_SESSION["level"] = $data["level"];
 				$_SESSION["email"] = $data["email"];
-	    	}
-			
-                // Thực thi hành động sau khi lưu thông tin vào session
-                // ở đây mình tiến hành chuyển hướng trang web tới một trang gọi là index.php
-			header('Location: admin.php');
+      }			
+      header('Location: admin.php');
 		}
 	}
 }
@@ -47,7 +40,20 @@ if (isset($_POST["ok"])) {
 <!DOCTYPE html>
 <html lang="en">
 
- <?php include "thuvien/head-admin.php" ?>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Đăng nhập</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
 
 <body class="bg-dark">
 <div class="container">

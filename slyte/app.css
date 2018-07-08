@@ -9415,6 +9415,12 @@ h1 {
   color: #28a745;
   text-align: center;
 }
+.tintuc p {
+  line-height: 1;
+}
+.tintuc .card {
+  height: 300px;
+}
 
 .card-tthot {
   padding: 20px 0;

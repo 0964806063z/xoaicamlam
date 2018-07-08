@@ -13,7 +13,7 @@
                     
                         <div class="col-lg-3 col-sm-6">
                             <div class="card" >
-                                    <a href="../chitietsp.php?id=<?php echo $data["manhom"]?>" style="text-align: center;">                        
+                                    <a href="chitietsp.php?id=<?php echo $data["manhom"]?>" style="text-align: center;">                        
                                             <img  src="../img/br1.jpg" alt="Card image cap">
                                             <p><h3> <?php echo $data["tennhom"]  ?></h3></p>
                                         </a>   

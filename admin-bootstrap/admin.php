@@ -8,7 +8,6 @@ session_start();
  <?php include "thuvien/head-admin.php" ?>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
-  <?php include "modules/header-admin.php" ?>
   <div class="content-wrapper">
     <div class="container-fluid">
       <!-- Breadcrumbs-->
@@ -389,8 +388,7 @@ session_start();
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>
-    <!-- Logout Modal-->
-    <?php include "modules/logout.php"?>
+   
   </div>
   <?php include "thuvien/js.php" ?>
 </body>

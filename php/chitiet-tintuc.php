@@ -5,7 +5,7 @@
     <div id="header">
         <?php include "module/header.php" ?>
     </div>
-    <div id="content">
+    <div id="content" >
          <?php include "module/tintuc-chitiet.php" ?>
     </div>
     <div id="footer">

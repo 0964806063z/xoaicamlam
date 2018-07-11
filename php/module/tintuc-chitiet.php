@@ -1,24 +1,39 @@
 
+<?php
+require_once("../lib/connection.php");
+ ?>
+<?php
+    $id = -1;
+    if (isset($_GET["id"])) {
+        $id = intval($_GET['id']);
+    }
+    // Lấy ra nội dung bài viết theo điều kiện id
+    $sql = "select * from news where news_id = $id";
+    // Thực hiện truy vấn data thông qua hàm mysqli_query
+    $query = mysqli_query($conn,$sql);
+?>
+<style>
+    .top a {
+  color: #28a745;
+}
+</style>
+
 <div class="container" style="padding: 50px 0">
         <div class="row">
             <div class="col-lg-8">
                     <div class="tintuc-chitiet">
-                            <p style="border-bottom: 1px solid #a09d9d">Home » Công an đã bắt giữ nghi can sát hại chồng của nhân tình</p>
-                            <h5>Công an đã bắt giữ nghi can sát hại chồng của nhân tình</h5>
-                            <p><b>Phát hiện xác chết trôi sông, cơ quan công an nhanh chóng vào cuộc xác mình. Qua điều tra, cơ quan điều tra nhận định đây là vụ án giết người nên tổ chức truy tìm thủ phạm.</b></p>
-                            <p>Theo cơ quan điều tra, sáng 20/6, chị Nguyễn Thị Phỉ đến cơ quan công an báo tin chồng mình là anh Nguyễn Văn C. đi bắt cá trên sông Thốt Nốt mất tích.
-                        
-                                    Từ tin báo, Công an quận Thốt Nốt (TP.Cần Thơ) tiến hành xác minh, làm rõ, rạng sáng cùng ngày, đối tượng Trí và anh C. (chồng Phỉ) có xảy ra đánh nhau tại tuyến sông Thốt Nốt.
-                                    
-                                    Sau đó, chỉ có Trí lên bờ, còn anh C. thì không thấy trở về nhà. Đến tối 21/6, người dân phát hiện thi thể của anh C. nổi trên sông thuộc khu vực phường Trung Kiên (quận Thốt Nốt).
-                                    
-                                    Qua điều tra, cơ quan công an xác định đây là vụ án giết người, nghi phạm chính trong vụ án là Trí nên truy bắt đối tượng.
-                                    
-                                    Bằng biện pháp nghiệp vụ, đối tượng Trí đã bị trinh sát bắt giữ khi đang lẩn trốn tại nhà chị ruột ở tỉnh Tiền Giang.
-                                    
-                                    Tại cơ quan công an, Trí khai nhận đã giết anh C. vào rạng sáng 20/6 và có quan hệ tình cảm với chị Phỉ, vợ nạn nhân.
-                                    
-                                    Hiện, vụ việc đang được ngành chức năng tiếp tục điều tra, làm rõ.c</p>
+                            <?php 
+                                    while ( $data = mysqli_fetch_array($query) ) {
+                                ?>
+                            <p class="top"><a href="tintuc.php">Tin tức</a> >> <a href=""><?php if ($data["cate_id"]=='c1') {
+                                echo 'Tin nông nghiệp';} if ($data["cate_id"]=='c2') {
+                                echo 'Bạn nhà nông';} if ($data["cate_id"]=='c3') {
+                                echo 'Kiến thức về xoài';} ?></a> >> <?php echo $data["title"]; ?></p>
+                            <h4 style="font-size: 20px; font-weight: bold;"><?php echo $data["title"]; ?></h4>
+                            <small class="text-muted"><?php $data["date_news"] ?></small>
+                            <p style="color: #444"><b><?php echo $data["introduce"] ?></b></p>
+                            <p><?php echo $data["content"]; ?></p>
+                                <?php } mysqli_close($conn);?>
                             <div class="fb-like" data-href="http://localhost/XoaiCL/php/about.php" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                             <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="750" data-numposts="5"></div>            
                         </div>

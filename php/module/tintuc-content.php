@@ -9,7 +9,7 @@
                 <div class="row">
                     <?php
                      require_once("../lib/connection.php");
-                      $sql = "select * from news ";
+                      $sql = "select * from news order by news_id desc";
                   
                       $query = mysqli_query($conn,$sql);
                         // Khởi tạo biến đếm $i = 0
@@ -18,19 +18,20 @@
                         while ( $data = mysqli_fetch_array($query) ) {
   
                     ?>
-                    <div class="col-lg-4 col-sm-6"> 
-                        <div class="card" >
-                            <img class="card-img-top" src="<?php $data["image"] ?>" alt="Card image cap">
-                            <div class="card-body">
-                                <a href="#"><h6 class="card-title"><?php echo $data["title"] ?></h6></a>
-                                    <p style="line-height: 1.1;" class="card-text"><?php echo $data["introduce"] ?> </p>
-                                <a href="chitiet-tintuc.php" class="btn btn-primary">Chi tiet</a>
+                    <div class="col-lg-6 col-sm-6"> 
+                                <div class="card" >
+                                    <img style="height: 100px;" class="card-img-top" src="../img/news/<?php echo $data['images'] ?>" alt="Card image cap">
+                                    <div class="card-body">
+                                        <a href="chitiet-tintuc.php?id=<?php echo $data['news_id']; ?>"><h6 class="card-title"><?php echo substr($data["title"], 0, 200)." ..." ?></h6></a>
+                                            <p style="line-height: 1.1;" class="card-text"><?php echo substr($data["introduce"], 0, 265)." ..." ?> </p>
+                                        <a href="chitiet-tintuc.php?id=<?php echo $data['news_id']; ?>" class="btn btn-primary">Chi tiet</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
                    <?php
                             $i++;
                         }
+                        mysqli_close($conn);
                     ?>
                 </div>
             </div>

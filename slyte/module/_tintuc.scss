@@ -9,8 +9,27 @@
     .card{
     height: 300px;
     }
+    
 }
 .card-tthot{
+
     padding: 20px 0;
     border-bottom: 2px dotted $gray-300;
+}
+.tintuc-chitiet{
+    background: #333;
+    .top{
+        border-bottom: 1px solid #a09d9d;
+         font-weight: bold; 
+         color: $green;
+         a{
+            color: $green;
+         }
+    }
+}
+.tinlq{
+    background: #333;
+}
+.a123{
+    background: #fff
 }

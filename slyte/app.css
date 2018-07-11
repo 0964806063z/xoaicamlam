@@ -9177,9 +9177,6 @@ h1 {
     position: relative;
   }
 }
-.hsp {
-  background: #dc3545;
-}
 .hsp .card {
   background: none;
   padding: 10px;
@@ -9425,6 +9422,26 @@ h1 {
 .card-tthot {
   padding: 20px 0;
   border-bottom: 2px dotted #dee2e6;
+}
+
+.tintuc-chitiet {
+  background: #333;
+}
+.tintuc-chitiet .top {
+  border-bottom: 1px solid #a09d9d;
+  font-weight: bold;
+  color: #28a745;
+}
+.tintuc-chitiet .top a {
+  color: #28a745;
+}
+
+.tinlq {
+  background: #333;
+}
+
+.a123 {
+  background: #fff;
 }
 
 .admin ul {

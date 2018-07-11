@@ -18,7 +18,7 @@ session_start();
 			$loi["save"]="*Vui lòng nhập đầy đủ thông tin!";
 		}
 		else{
-			$sql = "INSERT INTO `user`(`id`, `username`, `pass`, `name`, `email`, `level`,`block`) VALUES ('NULL','$username','$password','$name','$email','$level','$is_block')";
+			$sql = "INSERT INTO `user`(`user_id`, `username`, `pass`, `name`, `email`, `level`,`block`) VALUES ('NULL','$username','$password','$name','$email','$level','$is_block')";
 			mysqli_query($conn,$sql);
 			$mes["save"]="Đã thêm thành công!";
 		}

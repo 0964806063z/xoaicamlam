@@ -5,7 +5,7 @@
         <div class="row">
             <?php
                      require_once("../lib/connection.php");
-                      $sql = "select * from news LIMIT 4";
+                      $sql = "select * from news order by news_id desc LIMIT 4 ";
                   
                       $query = mysqli_query($conn,$sql);
                         $i = 0;
@@ -17,14 +17,14 @@
                     <div class="row card-tt">
                         <div class="col-lg-4">
                             <a href="#">
-                                <img class="rounded float-left img-thumbnail"  src="<?php $data["image"] ?>" alt="">
+                                <img class="rounded float-left img-thumbnail"  src="../img/news/<?php echo $data['images'] ?>" alt="">
                              </a>
                         </div>
                          <div class="col-lg-8">
                             <a href="#">
-                                <h3><?php echo $data["title"] ?></h3>
+                                <h3><?php echo substr($data["title"], 0, 50)." ..." ?></h3>
                             </a>  
-                            <p><?php echo $data["introduce"] ?> </p>
+                            <p><?php echo  substr($data["introduce"], 0, 130)." ..." ?> </p>
                             <div class="float-right"> 
                                 <button href="chitiet-tintuc.php" class="btn btn-primary">Chi tiết</button>
                             </div>
